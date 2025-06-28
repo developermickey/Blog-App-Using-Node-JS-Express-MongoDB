@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+    <main class="max-w-2xl mx-auto pt-32 px-4">
+        <h1 class="text-3xl mb-6 text-emerald-400">Create a New Blog Post</h1>
+        <form action="/posts" method="POST" class="flex flex-col gap-4">
+            <input type="text" name="title" placeholder="Post Title" class="px-4 py-2 rounded text-black" required />
+            <textarea name="content" placeholder="Post Content" class="px-4 py-2 rounded text-black h-48"
+                required></textarea>
+
+            <!-- ✅ New field for image URL -->
+            <input type="url" name="image" placeholder="Image URL (optional)" class="px-4 py-2 rounded text-black" />
+
+            <button type="submit" class="bg-emerald-500 hover:bg-emerald-600 text-white py-2 rounded">Publish</button>
+        </form>
+    </main>
+    </body>
+
+    </html>

@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+    <main class="max-w-6xl mx-auto pt-32 px-4">
+        <h1 class="text-3xl mb-8 text-emerald-400 font-bold">All Blog Posts</h1>
+
+        <% if (posts.length> 0) { %>
+            <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <% posts.forEach(post=> { %>
+                    <div class="bg-zinc-800 p-6 rounded shadow">
+                        <h2 class="text-xl font-bold mb-2">
+                            <%= post.title %>
+                        </h2>
+
+                        <% if (post.image) { %>
+                            <img src="<%= post.image %>" alt="Post image"
+                                class="rounded w-full h-40 object-cover mb-2" />
+                            <% } %>
+
+                                <p class="text-gray-400 text-sm mb-1">By: <%= post.user ? post.user.name : 'Unknown' %>
+                                </p>
+                                <p class="text-gray-500 text-sm mb-2">Created: <%= post.createdAt.toDateString() %>
+                                </p>
+                                <p class="text-gray-300 mb-2">
+                                    <%= post.content.substring(0, 150) %>...
+                                </p>
+                    </div>
+                    <% }); %>
+            </div>
+            <% } else { %>
+                <p>No posts found.</p>
+                <% } %>
+    </main>
+    </body>
+
+    </html>
