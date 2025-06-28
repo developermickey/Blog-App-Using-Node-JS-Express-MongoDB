@@ -11,6 +11,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@tiptap/core": "^2.23.0",
+    "@tiptap/starter-kit": "^2.23.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "csurf": "^1.11.0",
