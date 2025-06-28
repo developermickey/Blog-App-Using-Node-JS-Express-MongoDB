@@ -167,7 +167,7 @@ app.get("/logout", (req, res) => {
 
 // ✅ Show create post form (protected)
 app.get("/posts/new", verifyToken, (req, res) => {
-  res.render("new-post");
+  res.render("new-post", { csrfToken: req.csrfToken() });
 });
 
 // ✅ Handle post creation (protected)

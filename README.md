@@ -41,8 +41,8 @@ Admin can view all users, all posts, and manage site content.
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/your-username/myblog-app.git
-cd myblog-app
+git clone https://github.com/developermickey/Blog-App-Using-Node-JS-Express-MongoDB.git
+cd Blog-App-Using-Node-JS-Express-MongoDB
 ```
 
 ---
